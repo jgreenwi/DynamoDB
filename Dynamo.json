@@ -1,0 +1,15 @@
+aws dynamodb create-table 
+{
+    "TableName": "top_cities_USA",
+    "AttributeDefinitions": [
+        { "AttributeName": "Chicago", "AttributeType": "S" }
+      ],
+    "KeySchema": [
+      { "AttributeName": "Cities"
+        , "KeyType": "HASH" }
+    ],
+    "ProvisionedThroughput": {
+      "ReadCapacityUnits": 5,
+      "WriteCapacityUnits": 5
+    }
+}
